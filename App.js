@@ -15,14 +15,17 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
-      <Header />
       <Image
         source={{
           width: 400,
+          height: 80,
+          paddingTop: 35,
+
           height: 100,
           uri: "https://image.shutterstock.com/image-vector/hand-sketched-lettering-typography-webpage-600w-1079744555.jpg",
         }}
       />
+      <Header />
       <View style={styles.content}>
         <View style={styles.list}>
           <FlatList

@@ -11,11 +11,11 @@ const styles = StyleSheet.create({
   header: {
     height: 80,
     paddingTop: 35,
-    backgroundColor: "aqua",
+    // backgroundColor: "#ffccb3",
   },
   title: {
     textAlign: "center",
-    color: "white",
+    color: "#ffccb3",
     fontWeight: "bold",
     fontSize: 20,
   },
