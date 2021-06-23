@@ -2,15 +2,21 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, FlatList, Image } from "react-native";
 import Header from "./header";
 import ItemList from "./itemList";
+import AddTodo from "./addTodo";
 export default function App() {
   const [todos, settodos] = useState([
-    { text: "Buy Coffee", key: "1" },
-    { text: "Clean Home", key: "2" },
     { text: "Play a video game ", key: "3" },
+    { text: "Watch my best movie", key: "4" },
+    { text: "Doing all my homework at time", key: "5" },
   ]);
   const handlePress = (key) => {
     settodos((prevtodo) => {
       return prevtodo.filter((todo) => todo.key != key);
+    });
+  };
+  const handlesubmit = (text) => {
+    settodos((prevtodo) => {
+      return [{ text: text, key: Math.random().toString() }, ...prevtodo];
     });
   };
   return (
@@ -26,6 +32,7 @@ export default function App() {
         }}
       />
       <Header />
+      <AddTodo handlesubmit={handlesubmit} />
       <View style={styles.content}>
         <View style={styles.list}>
           <FlatList

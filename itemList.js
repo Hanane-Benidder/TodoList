@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 export default function ItemList({ item, handlePress }) {
   return (
-    <TouchableOpacity onPress={() => handlePress()}>
+    <TouchableOpacity onPress={() => handlePress(item.key)}>
       <Text style={styles.item}>{item.text} </Text>
     </TouchableOpacity>
   );
