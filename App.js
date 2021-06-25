@@ -14,7 +14,7 @@ export default function App() {
       return prevtodo.filter((todo) => todo.key != key);
     });
   };
-  const handlesubmit = (text) => {
+  const handle = (text) => {
     settodos((prevtodo) => {
       return [{ text: text, key: Math.random().toString() }, ...prevtodo];
     });
@@ -32,7 +32,7 @@ export default function App() {
         }}
       />
       <Header />
-      <AddTodo handlesubmit={handlesubmit} />
+      <AddTodo handlesubmit={handle} />
       <View style={styles.content}>
         <View style={styles.list}>
           <FlatList
