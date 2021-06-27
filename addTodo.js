@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
-export default function AddTodo({ handle }) {
+export default function AddTodo({ handlesubmit }) {
   const [text, settext] = useState("");
   const changeInput = (val) => {
     settext(val);
@@ -15,7 +15,7 @@ export default function AddTodo({ handle }) {
       />
 
       <View style={styles.btton}>
-        <Button title="Add Todo" onPress={() => handle(text)} />
+        <Button title="Add Todo" onPress={() => handlesubmit(text)} />
       </View>
     </View>
   );
